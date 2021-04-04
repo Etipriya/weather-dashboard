@@ -7,3 +7,5 @@
 ## Screenshots
 
 ## Link to the deployed application
+
+https://etipriya.github.io/weather-dashboard/.
