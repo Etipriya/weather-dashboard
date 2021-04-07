@@ -4,74 +4,63 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather</title>
+    <title>Weather Forecast</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
   <body>
-    <!-- <h1>Weather Dashboard</h1> -->
-    <!-- <header> -->
-      <!-- <nav class="navbar navbar-dark bg-dark"> -->
-        <!-- Navbar content -->
-      <!-- </nav> -->
-    <!-- </header> -->
-
-    <body>
-      <!-- Header Container -->
-      <header>
-        <div class="d-flex align-items-center justify-content-center app-header">
-          <h1>Weather Dashboard</h1>
+    <!-- Header Container -->
+    <header class="navbar d-flex justify-content-centre bg-dark text-light">
+      <div class="display-4">Weather Dashboard</div>
+    </header>
+    <div class="bg-light">
+      <div class="text-white text-align-left bg-light w-10 p-2 text-medium">
+        <h1 class="text-dark text-align-left mb-3">Search for a city</h1>
+      </div>
+      <form id="form">
+        <!-- <div class="input-group mb-3 mt-3 px-3"> -->
+        <div class="mb-3 text-left">
+          <!-- <input type="form" class="form-control" id="form" aria-describedby="form" placeholder="Search.." name="search"> -->
+          <select class="form-select">
+            <option selected disabled>Select a city...</option>
+            <option value="london">London</option>
+            <option value="solihull">Solihull</option>
+            <option value="birmingham">Birmingham</option>
+            <option value="coventry">Coventry</option>
+            <option value="cornwall">Cornwall</option>
+            <option value="edinburgh">Edinburgh</option>
+            <option value="snowdonia">Snowdonia</option>
+            <option value="cardiff">Cardiff</option>
+          </select>
+          <button type="submit" class="btn btn-primary">
+            <i class="fa fa-search"></i>
+          </button>
         </div>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <div class="container-fluid">
-            <!-- <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            > -->
-              <!-- <span class="navbar-toggler-icon"></span>
-            </button> -->
-            <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul
-                class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-end"
-              >
-                <li class="nav-item mx-2">
-                  <button type="button" class="btn btn-link nav-link" id="home">
-                    Home
-                  </button>
-                </li>
-                <li class="nav-item mx-2">
-                  <button
-                    type="button"
-                    class="btn btn-link nav-link"
-                    id="favourites"
-                  >
-                    Favourites
-                  </button>
-                </li>
-                <form class="d-flex mx-2" id="basic-search-form">
-                  <input
-                    class="form-control me-2"
-                    type="search"
-                    placeholder="Search movie"
-                    aria-label="Search"
-                    id="basic-search-input"
-                  />
-                  <button class="btn btn-outline-success" type="submit">
-                    Search
-                  </button>
-                </form>
-              </ul>
-            </div>
-          </div>
-        </nav> -->
-      </header>
-      <!-- Movie Cards Container -->
-      <div
-        class="container-fluid d-flex flex-wrap justify-content-center my-4"
-        id="cards-container"
-      ></div>
+      </form>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
