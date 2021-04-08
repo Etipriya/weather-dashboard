@@ -1,6 +1,10 @@
 * {
   box-sizing: border-box;
 }
+.justify-content-centre {
+  text-align: center;
+}
+
 .search {
   font-size: 2px;
   text-align: left;
