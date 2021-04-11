@@ -4,12 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome Link -->
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
       crossorigin="anonymous"
     />
+    <!-- Bootstrap Link -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -21,12 +23,14 @@
   </head>
   <body>
     <header>
+      <!-- Declared navbar for the header -->
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <h1 class="navbar-brand mx-auto mb-0 fs-2 p-3">Weather Dashboard</h1>
         </div>
       </nav>
     </header>
+    <!-- Created a container for the content below the header -->
     <main class="container-fluid">
       <div class="row px-3">
         <div class="col-md-3 col-sm-12 bg-light">
@@ -36,6 +40,7 @@
               class="row row-cols-lg-auto g-3 align-items-center"
               id="search-by-city-form"
             >
+              <!-- This tab is for search of a city -->
               <div class="col-12">
                 <div class="input-group">
                   <input
@@ -48,6 +53,7 @@
               </div>
 
               <div class="col-12">
+                <!-- This button is for submitting the search -->
                 <button type="submit" class="btn btn-primary">
                   <i class="fas fa-search"></i>
                 </button>
@@ -56,10 +62,12 @@
           </div>
           <div class="my-4" id="searched-cities"></div>
         </div>
+        <!-- Gives you the name and weather content of the city -->
         <div class="col-md-9 col-sm-12">
           <div class="row">
             <div class="col-12" id="current-day"></div>
           </div>
+          <!-- Declared forecast  -->
           <div class="row">
             <div class="col-12">
               <h2>5-Day Forecast</h2>
@@ -77,21 +85,25 @@
       integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG"
       crossorigin="anonymous"
     ></script>
+    <!-- Bootstrap Link -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
       integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc"
       crossorigin="anonymous"
     ></script>
+    <!-- Cloudflare Jquery Link -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
       integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
       crossorigin="anonymous"
     ></script>
+    <!-- Moment Link -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
       integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
       crossorigin="anonymous"
     ></script>
+    <!-- Script Link -->
     <script src="./assets/js/index.js"></script>
   </body>
 </html>
