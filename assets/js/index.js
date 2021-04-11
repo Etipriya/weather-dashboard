@@ -129,7 +129,7 @@ const getUvIndexClass = uvIndex => {
   if (uvIndex > 7) {
     return "p-2 bg-primary text-white";
   } else if (uvIndex < 7) {
-    return "p-2 bg-danger text-white";
+    return "p-2 bg-red text-black";
   } else {
     return "";
   }
