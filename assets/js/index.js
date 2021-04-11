@@ -1,5 +1,6 @@
 const API_KEY = "60b4fb66103f9e3c6f93920a7d7f1377";
 
+// Get items from local storage
 const getFromLocalStorage = () => {
   const localStorageData = JSON.parse(localStorage.getItem("cities"));
 
@@ -10,6 +11,7 @@ const getFromLocalStorage = () => {
   }
 };
 
+// Fetch data by using async and await
 const fetchData = async url => {
   try {
     const response = await fetch(url);
@@ -22,6 +24,7 @@ const fetchData = async url => {
   }
 };
 
+// Render all cards by city name
 const getDataByCityName = async event => {
   const target = $(event.target);
   if (target.is("li")) {
@@ -31,6 +34,7 @@ const getDataByCityName = async event => {
   }
 };
 
+// Connects to weather API and show current weather
 const transformCurrentDayData = (data, name) => {
   const current = data.current;
   return {
@@ -44,6 +48,7 @@ const transformCurrentDayData = (data, name) => {
   };
 };
 
+// Connects to weather API and show forecasted weather
 const transformForecastData = data => {
   return {
     date: moment.unix(data.dt).format("MM/DD/YYYY"),
@@ -53,6 +58,7 @@ const transformForecastData = data => {
   };
 };
 
+// Render all cards from local storage and converts them using JSON
 const onSubmit = async event => {
   event.preventDefault();
 
@@ -70,6 +76,7 @@ const onSubmit = async event => {
   renderAllCards(cityName);
 };
 
+// Render forecast cards using await
 const renderAllCards = async cityName => {
   const currentDayUrl = `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=${API_KEY}`;
 
@@ -93,6 +100,7 @@ const renderAllCards = async cityName => {
   renderCurrentDayCard(currentDayData);
 };
 
+// Append list items in local storage to ul
 const renderCitiesFromLocalStorage = () => {
   $("#searched-cities").empty();
 
@@ -116,17 +124,18 @@ const renderCitiesFromLocalStorage = () => {
   $("#searched-cities").append(ul);
 };
 
-// FIX this function with the right class names and threshold values and then use in renderCurrentDayCard()
+// UV index specified according to the maximum range occurrence in UK
 const getUvIndexClass = uvIndex => {
-  if (uvIndex > 2) {
+  if (uvIndex > 7) {
     return "p-2 bg-primary text-white";
-  } else if (uvIndex < 2) {
+  } else if (uvIndex < 7) {
     return "p-2 bg-danger text-white";
   } else {
     return "";
   }
 };
 
+// Declared render current day card
 const renderCurrentDayCard = data => {
   $("#current-day").empty();
 
@@ -145,6 +154,7 @@ const renderCurrentDayCard = data => {
   $("#current-day").append(card);
 };
 
+// Declared forecast day card
 const renderForecastCard = data => {
   const card = `<div class="card mh-100 bg-primary text-light rounded card-block">
     <h5 class="card-title p-1">${data.date}</h5>
@@ -164,6 +174,7 @@ const onReady = () => {
   renderCitiesFromLocalStorage();
 };
 
+// Declared submit
 $("#search-by-city-form").on("submit", onSubmit);
 
 $(document).ready(onReady);
