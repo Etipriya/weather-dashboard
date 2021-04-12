@@ -127,9 +127,9 @@ const renderCitiesFromLocalStorage = () => {
 // UV index specified according to the maximum range occurrence in UK
 const getUvIndexClass = uvIndex => {
   if (uvIndex > 7) {
-    return "p-2 bg-primary text-white";
+    return "bg-primary text-white";
   } else if (uvIndex < 7) {
-    return "p-2 bg-red text-black";
+    return "bg-red text-black";
   } else {
     return "";
   }
@@ -147,7 +147,9 @@ const renderCurrentDayCard = data => {
       <div class="py-2">Temperature: ${data.temperature}&deg; C</div>
       <div class="py-2">Humidity: ${data.humidity}%</div>
       <div class="py-2">Wind Speed: ${data.windSpeed} MPH</div>
-      <div class="py-2">UV Index: <span class="">${data.uvi}</span></div>
+      <div class="py-2">UV Index: <span class="p-2 ${getUvIndexClass(
+        data.uvi
+      )}">${data.uvi}</span></div>
     </div>
   </div>`;
 
