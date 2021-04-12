@@ -43,7 +43,7 @@ const transformCurrentDayData = (data, name) => {
     humidity: current.humidity,
     windSpeed: current.wind_speed,
     date: moment.unix(current.dt).format("MM/DD/YYYY"),
-    iconURL: `http://openweathermap.org/img/wn/${current.weather[0].icon}@2x.png`,
+    iconURL: `https://openweathermap.org/img/wn/${current.weather[0].icon}@2x.png`,
     uvi: current.uvi,
   };
 };
@@ -78,7 +78,7 @@ const onSubmit = async event => {
 
 // Render forecast cards using await
 const renderAllCards = async cityName => {
-  const currentDayUrl = `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=${API_KEY}`;
+  const currentDayUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=${API_KEY}`;
 
   const currentDayResponse = await fetchData(currentDayUrl);
 
